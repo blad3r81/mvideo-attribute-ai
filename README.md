@@ -6,7 +6,7 @@
 
 Версия с доработками к 23 октября работает на [VM хакатона](https://tochka-sborki-2026-team-013.hub.gigaschool.ru/); здесь настроен шлюз LLM организаторов. Vercel показывает более раннее демо. [Командный Gitea](https://git.hub.gigaschool.ru/tochka-sborki-2026-team-013/project) содержит официальный снимок `main` до стоп-кода 23 октября. В этом GitHub опубликованы последующие материалы для технического чекпоинта; они не меняют официальный снимок.
 
-Для экспертов: [краткий сценарий технического чекпоинта](docs/technical-checkpoint-2026-10-23.md), [актуальное описание решения](platform-description.md), [проверка метрик и ограничений](reports/holdout_assistant_audit.md).
+Для экспертов: [сценарий показа на шесть минут](docs/demo-runbook-2026-10-23.md), [краткий технический рассказ](docs/technical-checkpoint-2026-10-23.md), [актуальное описание решения](platform-description.md), [проверка метрик и ограничений](reports/holdout_assistant_audit.md).
 
 ## Быстрый запуск
 
