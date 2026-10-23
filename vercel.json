@@ -3,7 +3,7 @@
   "framework": null,
   "env": {"DEMO_MODE":"1","LLM_DAILY_LIMIT":"60"},
   "functions": {
-    "api/index.js": {"includeFiles": "data/*.json"}
+    "api/index.js": {"includeFiles": "{data,config}/*.json"}
   },
   "rewrites": [
     {"source": "/api/:route*", "destination": "/api/index?route=:route*"},
