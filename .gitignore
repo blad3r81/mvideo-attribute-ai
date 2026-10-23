@@ -1,0 +1,13 @@
+.vercel
+.env
+.env.*
+!.env.example
+*.zip
+work/
+__pycache__/
+logs/
+.ipynb_checkpoints/
+data/predictions_full.jsonl.gz
+data/*.jsonl.gz
+
+data/holdout_predictions.json

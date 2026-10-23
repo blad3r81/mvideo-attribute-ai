@@ -1,0 +1,16 @@
+{
+  "name": "mvideo-attribute-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "predict": "node scripts/predict.js",
+    "evaluate": "node scripts/evaluate.js",
+    "smoke": "node scripts/smoke.js",
+    "check:setup": "node scripts/check_setup.js",
+    "verify:reference": "node scripts/verify_reference.js && node scripts/predict.js data/holdout_cards.json data/holdout_predictions.json --rules-only && node scripts/evaluate.js data/holdout_assistant_reference.json data/holdout_predictions.json",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" }
+}

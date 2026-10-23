@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "env": {"DEMO_MODE":"1","LLM_DAILY_LIMIT":"60"},
+  "functions": {
+    "api/index.js": {"includeFiles": "data/*.json"}
+  },
+  "rewrites": [
+    {"source": "/api/:route*", "destination": "/api/index?route=:route*"},
+    {"source": "/presentation", "destination": "/presentation/index.html"}
+  ]
+}

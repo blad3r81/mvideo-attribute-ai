@@ -1,0 +1,4 @@
+{
+  "acceptance_threshold": 0.8,
+  "confidence_type": "heuristic"
+}

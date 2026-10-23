@@ -1,0 +1,13 @@
+.git
+.vercel
+*.zip
+work
+logs
+reports
+scripts
+test
+docs
+*.png
+requirements.txt
+data/*.jsonl.gz
+data/real_predictions.json

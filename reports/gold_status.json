@@ -1,0 +1,9 @@
+{
+  "status": "not_evaluated",
+  "independent_human_gold_available": false,
+  "reason": "The supplied archive has descriptions, seller attributes and clicks, but no independent human gold labels.",
+  "reported_precision": null,
+  "reported_recall": null,
+  "reported_f1": null,
+  "instructions": "docs/gold-evaluation.md"
+}

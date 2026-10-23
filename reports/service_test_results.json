@@ -1,0 +1,36 @@
+{
+  "real_cards": [
+    {
+      "id": "30087001",
+      "accepted": 4,
+      "review": 43,
+      "missing_required": [
+        "model",
+        "battery_mah"
+      ]
+    },
+    {
+      "id": "30072187",
+      "accepted": 7,
+      "review": 40,
+      "missing_required": []
+    },
+    {
+      "id": "400000387",
+      "accepted": 2,
+      "review": 52,
+      "missing_required": []
+    },
+    {
+      "id": "401253899",
+      "accepted": 5,
+      "review": 13,
+      "missing_required": []
+    }
+  ],
+  "normalization_color_and_eu_size": true,
+  "conflict_to_review": true,
+  "invalid_requests_rejected": 5,
+  "endpoints_checked": 5,
+  "llm_not_configured_clear": true
+}

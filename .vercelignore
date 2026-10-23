@@ -1,0 +1,11 @@
+data/predictions_full.jsonl.gz
+data/*.jsonl.gz
+data/real_predictions.json
+data/gold_format.example.json
+work/
+reports/
+scripts/
+test/
+docs/
+*.png
+requirements.txt

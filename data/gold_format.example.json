@@ -1,0 +1,16 @@
+[
+  {
+    "id": "real-card-id",
+    "category": "smartphone",
+    "seller_id": "seller-id",
+    "traffic_rows": 12,
+    "attributes": {
+      "brand": "Samsung",
+      "model": "Galaxy A55",
+      "storage_gb": 256,
+      "screen_inches": 6.6,
+      "battery_mah": 5000,
+      "color": "чёрный"
+    }
+  }
+]

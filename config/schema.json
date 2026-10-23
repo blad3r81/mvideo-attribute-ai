@@ -1,0 +1,21 @@
+{
+  "version": "demo-1",
+  "note": "Демонстрационная схема из задания и примеров презентации. Заменить после получения датасета и справочника маркетплейса.",
+  "categories": {
+    "smartphone": { "label": "Смартфон", "required": ["brand", "model", "storage_gb", "screen_inches", "battery_mah", "color"] },
+    "laptop": { "label": "Ноутбук", "required": ["brand", "model", "processor", "ram_gb", "storage_gb", "screen_inches", "color"] },
+    "clothing": { "label": "Одежда", "required": ["brand", "size", "color", "material"] }
+  },
+  "attributes": {
+    "brand": { "label": "Бренд", "type": "string" },
+    "model": { "label": "Модель", "type": "string" },
+    "processor": { "label": "Процессор", "type": "string" },
+    "storage_gb": { "label": "Накопитель / память", "type": "number", "unit": "ГБ" },
+    "ram_gb": { "label": "Оперативная память", "type": "number", "unit": "ГБ" },
+    "screen_inches": { "label": "Диагональ экрана", "type": "number", "unit": "дюйм" },
+    "battery_mah": { "label": "Ёмкость батареи", "type": "number", "unit": "мА·ч" },
+    "color": { "label": "Цвет", "type": "enum", "values": ["чёрный", "белый", "красный", "синий", "зелёный", "серый", "серебристый"] },
+    "size": { "label": "Размер", "type": "object" },
+    "material": { "label": "Материал", "type": "enum", "values": ["хлопок", "полиэстер", "шерсть"] }
+  }
+}

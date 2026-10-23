@@ -1,0 +1,432 @@
+[
+  {
+    "id": "30081398",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Tecno",
+      "model": "Spark 8c",
+      "storage_gb": 64,
+      "screen_inches": 6.6,
+      "battery_mah": 5000,
+      "color": "серый"
+    }
+  },
+  {
+    "id": "30085642",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "HUAWEI",
+      "model": "Pura 70",
+      "storage_gb": 256,
+      "screen_inches": 6.6,
+      "battery_mah": 4900,
+      "color": "розовый"
+    }
+  },
+  {
+    "id": "30090263",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "HUAWEI",
+      "model": "nova 11",
+      "storage_gb": 256,
+      "screen_inches": 6.7,
+      "battery_mah": 4500,
+      "color": "золотой"
+    }
+  },
+  {
+    "id": "400228693",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Infinix",
+      "model": "Hot 30 Play",
+      "storage_gb": 128,
+      "screen_inches": null,
+      "battery_mah": 6000,
+      "color": "фиолетовый"
+    }
+  },
+  {
+    "id": "400335293",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "HONOR",
+      "model": "200",
+      "storage_gb": 512,
+      "screen_inches": 6.7,
+      "battery_mah": 5200,
+      "color": "зелёный"
+    }
+  },
+  {
+    "id": "400418326",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Xiaomi",
+      "model": "Redmi Note 14 Pro",
+      "storage_gb": 256,
+      "screen_inches": 6.67,
+      "battery_mah": 5500,
+      "color": "чёрный"
+    }
+  },
+  {
+    "id": "400478532",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "HUAWEI",
+      "model": "nova 14 Pro",
+      "storage_gb": 512,
+      "screen_inches": 6.78,
+      "battery_mah": 5500,
+      "color": "синий"
+    }
+  },
+  {
+    "id": "400496182",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Samsung",
+      "model": "Galaxy A17",
+      "storage_gb": 256,
+      "screen_inches": 6.7,
+      "battery_mah": 5000,
+      "color": "серый"
+    }
+  },
+  {
+    "id": "400633718",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "HONOR",
+      "model": "X6c",
+      "storage_gb": 128,
+      "screen_inches": 6.61,
+      "battery_mah": 5300,
+      "color": "зелёный"
+    }
+  },
+  {
+    "id": "401064044",
+    "category": "761",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Samsung",
+      "model": "Galaxy S25 Ultra",
+      "storage_gb": 1024,
+      "screen_inches": 6.9,
+      "battery_mah": 5000,
+      "color": "серый"
+    }
+  },
+  {
+    "id": "30070717",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone 14 Pro",
+      "storage_gb": 256,
+      "screen_inches": 6.1,
+      "battery_mah": null,
+      "color": "фиолетовый"
+    }
+  },
+  {
+    "id": "30070798",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone 14 Pro Max",
+      "storage_gb": 512,
+      "screen_inches": 6.7,
+      "battery_mah": null,
+      "color": "золотой"
+    }
+  },
+  {
+    "id": "30080465",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone 16e",
+      "storage_gb": 256,
+      "screen_inches": 6.1,
+      "battery_mah": 3279,
+      "color": "чёрный"
+    }
+  },
+  {
+    "id": "30083510",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone 16 Pro",
+      "storage_gb": 256,
+      "screen_inches": 6.3,
+      "battery_mah": null,
+      "color": "белый"
+    }
+  },
+  {
+    "id": "30091798",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone 16e",
+      "storage_gb": 256,
+      "screen_inches": null,
+      "battery_mah": null,
+      "color": "белый"
+    }
+  },
+  {
+    "id": "400480555",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone 17 Pro",
+      "storage_gb": 256,
+      "screen_inches": 6.3,
+      "battery_mah": null,
+      "color": "оранжевый"
+    }
+  },
+  {
+    "id": "400489984",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone Air",
+      "storage_gb": 512,
+      "screen_inches": null,
+      "battery_mah": null,
+      "color": "синий"
+    }
+  },
+  {
+    "id": "401049066",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone 17",
+      "storage_gb": 256,
+      "screen_inches": 6.3,
+      "battery_mah": 3692,
+      "color": "белый"
+    }
+  },
+  {
+    "id": "401049068",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone 17",
+      "storage_gb": 256,
+      "screen_inches": 6.3,
+      "battery_mah": 3692,
+      "color": "фиолетовый"
+    }
+  },
+  {
+    "id": "401063355",
+    "category": "914",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "iPhone 17 Pro Max",
+      "storage_gb": 1024,
+      "screen_inches": 6.9,
+      "battery_mah": 4823,
+      "color": "синий"
+    }
+  },
+  {
+    "id": "30075271",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "ASUS",
+      "model": "E1504FA-L11348",
+      "processor": "AMD Ryzen 5 7520U",
+      "ram_gb": 8,
+      "storage_gb": 512,
+      "screen_inches": 15.6,
+      "color": "чёрный"
+    }
+  },
+  {
+    "id": "400534978",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "MSI",
+      "model": "Vector 17 HX AI A2XWIG",
+      "processor": "Intel Core Ultra 9 275HX",
+      "ram_gb": 32,
+      "storage_gb": 1024,
+      "screen_inches": 17,
+      "color": "серый"
+    }
+  },
+  {
+    "id": "400535029",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Acer",
+      "model": "Predator Helios 18 AI PH18-73-939Q",
+      "processor": "Intel Core Ultra 9 275HX",
+      "ram_gb": 32,
+      "storage_gb": 2048,
+      "screen_inches": 18,
+      "color": "чёрный"
+    }
+  },
+  {
+    "id": "400558740",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "MSI",
+      "model": "Venture A17 AI A2HMG-002XRU",
+      "processor": "AMD Ryzen 7 260",
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "screen_inches": 17.3,
+      "color": null
+    }
+  },
+  {
+    "id": "400625634",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "MSI",
+      "model": "Thin 15 B13UC-3287XRU",
+      "processor": "Intel Core i5-13420H",
+      "ram_gb": 16,
+      "storage_gb": 1024,
+      "screen_inches": 15.6,
+      "color": "серый"
+    }
+  },
+  {
+    "id": "400916231",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "ASUS",
+      "model": "UX3405CA-ST1488",
+      "processor": "Intel Core Ultra 9 285H",
+      "ram_gb": 32,
+      "storage_gb": 1024,
+      "screen_inches": 14,
+      "color": "синий"
+    }
+  },
+  {
+    "id": "401039798",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Treidcomputers",
+      "model": "NoteBook N3350",
+      "processor": "Intel Celeron N3350",
+      "ram_gb": 6,
+      "storage_gb": 256,
+      "screen_inches": 14,
+      "color": "серебристый"
+    }
+  },
+  {
+    "id": "401054127",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Apple",
+      "model": "MacBook Air 15",
+      "processor": "Apple M5",
+      "ram_gb": 16,
+      "storage_gb": 1024,
+      "screen_inches": 15.3,
+      "color": "сияющая звезда"
+    }
+  },
+  {
+    "id": "401261898",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "HP",
+      "model": "ProBook 440 G11",
+      "processor": "Intel Core Ultra 7 155U",
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "screen_inches": 14,
+      "color": "серебристый"
+    }
+  },
+  {
+    "id": "401261906",
+    "category": "987",
+    "seller_id": null,
+    "traffic_rows": null,
+    "attributes": {
+      "brand": "Samsung",
+      "model": "Galaxy Book 4 NP750",
+      "processor": null,
+      "ram_gb": 16,
+      "storage_gb": 512,
+      "screen_inches": 15.6,
+      "color": "серебристый"
+    }
+  }
+]

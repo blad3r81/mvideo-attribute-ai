@@ -1,0 +1,178 @@
+{
+  "time": "2026-10-19T09:33:42.127Z",
+  "base": "http://127.0.0.1:8000",
+  "checks": [
+    {
+      "name": "01 endpoints and dataset counts",
+      "passed": true,
+      "ms": 151,
+      "demo_cards": 110,
+      "sku_with_description": 1177200
+    },
+    {
+      "name": "02 real smartphone SKU",
+      "passed": true,
+      "ms": 309,
+      "accepted": 4,
+      "review": 43
+    },
+    {
+      "name": "03 real laptop SKU",
+      "passed": true,
+      "ms": 129,
+      "accepted": 7,
+      "review": 40
+    },
+    {
+      "name": "04 real TV SKU",
+      "passed": true,
+      "ms": 47,
+      "accepted": 2,
+      "review": 52
+    },
+    {
+      "name": "05 real clothing SKU",
+      "passed": true,
+      "ms": 90,
+      "accepted": 5,
+      "review": 13
+    },
+    {
+      "name": "06 bilingual color and EU size",
+      "passed": true,
+      "ms": 3,
+      "color": "красный",
+      "size": {
+        "system": "EU",
+        "value": "42"
+      }
+    },
+    {
+      "name": "07 conflicting seller values",
+      "passed": true,
+      "ms": 26,
+      "reason": "conflicting_values"
+    },
+    {
+      "name": "08 range is not exact value",
+      "passed": true,
+      "ms": 6,
+      "status": "missing"
+    },
+    {
+      "name": "09 unknown category rejected",
+      "passed": true,
+      "ms": 1
+    },
+    {
+      "name": "10 malformed and oversized requests rejected",
+      "passed": true,
+      "ms": 14
+    },
+    {
+      "name": "11 unknown price stays review",
+      "passed": true,
+      "ms": 2,
+      "status": "review"
+    },
+    {
+      "name": "12 LLM reviews other uncertain fields without battery evidence",
+      "passed": true,
+      "ms": 7228,
+      "missing": [
+        "model",
+        "battery_mah"
+      ],
+      "llm_status": "completed",
+      "suggestions": 0,
+      "usage": {
+        "prompt_tokens": 2788,
+        "total_tokens": 3626,
+        "completion_tokens": 838,
+        "prompt_tokens_details": {
+          "cached_tokens": 1200,
+          "created_cache_tokens": 1584,
+          "multimodal_tokens": null
+        },
+        "completion_tokens_details": null
+      }
+    },
+    {
+      "name": "13 LLM on real laptop",
+      "passed": true,
+      "ms": 6200,
+      "missing": [
+        "storage_gb"
+      ],
+      "llm_status": "completed",
+      "suggestions": 0,
+      "usage": {
+        "prompt_tokens": 2888,
+        "total_tokens": 3444,
+        "completion_tokens": 556,
+        "prompt_tokens_details": {
+          "cached_tokens": 1328,
+          "created_cache_tokens": 1552,
+          "multimodal_tokens": null
+        },
+        "completion_tokens_details": null
+      }
+    },
+    {
+      "name": "14 LLM on manual smartphone",
+      "passed": true,
+      "ms": 1077,
+      "missing": [
+        "battery_mah"
+      ],
+      "llm_status": "completed",
+      "suggestions": 0,
+      "usage": {
+        "prompt_tokens": 1436,
+        "total_tokens": 1520,
+        "completion_tokens": 84,
+        "prompt_tokens_details": {
+          "cached_tokens": 1328,
+          "created_cache_tokens": 96,
+          "multimodal_tokens": null
+        },
+        "completion_tokens_details": null
+      }
+    },
+    {
+      "name": "15 LLM on manual laptop",
+      "passed": true,
+      "ms": 2676,
+      "missing": [
+        "model",
+        "processor",
+        "storage_gb"
+      ],
+      "llm_status": "completed",
+      "suggestions": 0,
+      "usage": {
+        "prompt_tokens": 1449,
+        "total_tokens": 1618,
+        "completion_tokens": 169,
+        "prompt_tokens_details": {
+          "cached_tokens": 1328,
+          "created_cache_tokens": 112,
+          "multimodal_tokens": null
+        },
+        "completion_tokens_details": null
+      }
+    }
+  ],
+  "stress": {
+    "requests": 100,
+    "concurrency": 10,
+    "success": 100,
+    "failures": 0,
+    "p50_ms": 20,
+    "p95_ms": 106,
+    "max_ms": 182,
+    "errors": []
+  },
+  "llm_calls": 4,
+  "passed": true
+}

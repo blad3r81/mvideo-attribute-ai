@@ -1,0 +1,32 @@
+{
+  "label_type": "silver catalog color; not a human gold set",
+  "sample_rows": 60000,
+  "train_rows": 45000,
+  "test_rows": 15000,
+  "class_counts": {
+    "чёрный": 23205,
+    "белый": 22260,
+    "серый": 4573,
+    "серебристый": 4461,
+    "синий": 2301,
+    "красный": 1492,
+    "зелёный": 1708
+  },
+  "rules": {
+    "coverage": 0.1729,
+    "accepted_precision_proxy": 0.9194,
+    "correct_rows": 2384,
+    "accepted_rows": 2593
+  },
+  "ml_raw": {
+    "accuracy_proxy": 0.8201,
+    "macro_f1_proxy": 0.7283
+  },
+  "ml_evidence_gated": {
+    "coverage": 0.1624,
+    "accepted_precision_proxy": 0.9676,
+    "correct_rows": 2357,
+    "accepted_rows": 2436
+  },
+  "note": "The model is not deployed: raw predictions lack literal evidence; gated predictions are review candidates only."
+}

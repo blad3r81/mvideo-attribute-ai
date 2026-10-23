@@ -1,0 +1,6 @@
+{
+  "cards": 1177200,
+  "with_catalog_offer": 241355,
+  "without_catalog_offer": 935845,
+  "output": "data\\predictions_full.jsonl.gz"
+}
