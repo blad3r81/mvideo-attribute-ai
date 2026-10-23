@@ -4,9 +4,9 @@
 
 Публичное демо: [mvideo-attribute-ai.vercel.app](https://mvideo-attribute-ai.vercel.app/). [Продуктовый бриф для чекпоинта](https://mvideo-attribute-ai.vercel.app/product-brief-checkpoint.pdf) содержит 10 слайдов, ответы на пять вопросов и снимки работающего прототипа в ПК-версии.
 
-Версия с доработками к 23 октября работает на [VM хакатона](https://tochka-sborki-2026-team-013.hub.gigaschool.ru/); здесь настроен шлюз LLM организаторов. Vercel показывает более раннее демо. [Командный Gitea](https://git.hub.gigaschool.ru/tochka-sborki-2026-team-013/project) содержит официальный снимок `main` до стоп-кода 23 октября. В этом GitHub опубликованы последующие материалы для технического чекпоинта; они не меняют официальный снимок.
+Версия с доработками к 23 октября работает на [VM хакатона](https://tochka-sborki-2026-team-013.hub.gigaschool.ru/); здесь настроен шлюз LLM организаторов. [Публичное демо на Vercel](https://mvideo-attribute-ai.vercel.app/) автоматически собирается из `main` этого GitHub и выполняет тот же основной сценарий на правилах; шлюз LLM на Vercel не настроен. [Командный Gitea](https://git.hub.gigaschool.ru/tochka-sborki-2026-team-013/project) содержит официальный снимок `main` до стоп-кода 23 октября. Последующие материалы для технического чекпоинта в этом GitHub не меняют официальный снимок.
 
-Для экспертов: [сценарий показа на шесть минут](docs/demo-runbook-2026-10-23.md), [краткий технический рассказ](docs/technical-checkpoint-2026-10-23.md), [актуальное описание решения](platform-description.md), [проверка метрик и ограничений](reports/holdout_assistant_audit.md).
+Для экспертов: [сценарий живого показа на шесть минут](docs/demo-runbook-2026-10-23.md), [новая презентация для технического чекпоинта](presentation/technical-checkpoint-2026-10-23.pdf), [её HTML-версия](presentation/technical-checkpoint-2026-10-23.html), [короткие технические ответы](docs/technical-checkpoint-2026-10-23.md), [актуальное описание решения](platform-description.md), [проверка метрик и ограничений](reports/holdout_assistant_audit.md). Прежний [продуктовый бриф](presentation/product-brief-checkpoint.pdf) сохранён отдельно.
 
 ## Быстрый запуск
 

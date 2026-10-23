@@ -26,6 +26,10 @@ LLM проверена на реальном шлюзе. При коротком
 
 Код и инструкция: https://github.com/blad3r81/mvideo-attribute-ai
 
-Демо на VM: https://tochka-sborki-2026-team-013.hub.gigaschool.ru/
+Демо на VM со шлюзом LLM: https://tochka-sborki-2026-team-013.hub.gigaschool.ru/
+
+Публичный резерв для сценария на правилах: https://mvideo-attribute-ai.vercel.app/
+
+Презентация для технического чекпоинта: https://github.com/blad3r81/mvideo-attribute-ai/blob/main/presentation/technical-checkpoint-2026-10-23.pdf
 
 Продуктовый бриф: https://mvideo-attribute-ai.vercel.app/product-brief-checkpoint.pdf
