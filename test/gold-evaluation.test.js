@@ -62,3 +62,15 @@ test('оценка останавливается при ошибке пакет
     assert.match(run.stderr,/Prediction failed for gold ID 1/);
   }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
+
+test('ё и е в одинаковом значении не считаются ошибкой',()=>{
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'attribute-gold-spelling-'));
+  try{
+    const gold=path.join(dir,'gold.json'),pred=path.join(dir,'pred.json');
+    fs.writeFileSync(gold,JSON.stringify([{id:'1',attributes:{color:'черный'}}]));
+    fs.writeFileSync(pred,JSON.stringify([{id:'1',attributes:{color:{status:'accepted',value:'чёрный',confidence:.9}}}]));
+    const run=spawnSync(process.execPath,['scripts/evaluate.js',gold,pred],{cwd:path.resolve(''),encoding:'utf8',timeout:10000});
+    assert.equal(run.status,0,run.stderr);
+    assert.equal(JSON.parse(run.stdout).overall.f1,1);
+  }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});

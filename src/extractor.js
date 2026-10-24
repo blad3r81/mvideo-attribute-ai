@@ -34,7 +34,12 @@ function dictionary(card,key,dict,aliases){
     if(source.startsWith('seller_attributes.') && !aliases.test(source.split('.').slice(1).join('.'))) continue;
     for(const [needle,value] of Object.entries(dict)) {
       const re=new RegExp(needle==='ал'?'(?<![\\p{L}])ал(?:ый|ая|ое|ые)(?![\\p{L}])':`(?<![\\p{L}])${needle}${/^[a-z]+$/i.test(needle)?'':'[\\p{L}]*'}(?![\\p{L}])`,'giu');
-      for(const m of text.matchAll(re)) out.push(candidate(key,value,m[0],source,'dictionary',source.startsWith('seller_')?.93:.86));
+      for(const m of text.matchAll(re)) {
+        // A color stem such as "сер" must not turn "сердце" into "серый".
+        if(key==='color'&&!/^(?:ч[её]рн|бел|красн|син|зел[её]н|серебрист|сер)(?:ый|ий|ая|ое|ые|ого|его|ой|ую|ым|ом|их|ыми)$/iu.test(m[0])
+          && !Object.hasOwn(getLexicon().color_aliases,m[0].toLocaleLowerCase()))continue;
+        out.push(candidate(key,value,m[0],source,'dictionary',source.startsWith('seller_')?.93:.86));
+      }
     }
   }
   return out;

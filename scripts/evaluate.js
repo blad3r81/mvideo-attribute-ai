@@ -31,7 +31,8 @@ if(predPath.endsWith('.jsonl.gz')){
     predictions.set(String(row.id),row);
   }
 }
-const clean=x=>JSON.stringify(x??null).toLocaleLowerCase();
+// Orthographic variants are equivalent; product/model granularity is not.
+const clean=x=>JSON.stringify(x??null).normalize('NFKC').replace(/\s+/g,' ').toLocaleLowerCase().replace(/ё/g,'е');
 const stats=new Map();
 const calibration=Array.from({length:10},(_,index)=>({bin:index,n:0,correct:0,confidence_sum:0}));
 for(const card of gold){

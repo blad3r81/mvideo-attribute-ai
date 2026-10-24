@@ -1,0 +1,14 @@
+[
+  {"id":"400365671","category":"761","attributes":{"brand":"Xiaomi","model":"14T Pro","storage_gb":512,"screen_inches":6.67,"battery_mah":5000,"color":"синий"}},
+  {"id":"400522813","category":"761","attributes":{"brand":"Xiaomi","model":"REDMI Note 15 Pro+ 5G","storage_gb":256,"screen_inches":6.83,"battery_mah":6500,"color":"коричневый"}},
+  {"id":"401208660","category":"761","attributes":{"brand":"Google","model":"Pixel 10 Pro","storage_gb":128,"screen_inches":6.3,"battery_mah":4870,"color":"черный"}},
+  {"id":"400634130","category":"761","attributes":{"brand":"Xiaomi","model":"Redmi Note 15","storage_gb":128,"screen_inches":6.77,"battery_mah":6000,"color":"черный"}},
+  {"id":"30088630","category":"914","attributes":{"brand":"Apple","model":"iPhone 15 Pro Max","storage_gb":256,"screen_inches":6.7,"battery_mah":null,"color":null}},
+  {"id":"30084419","category":"914","attributes":{"brand":"Apple","model":"iPhone 16 Pro","storage_gb":512,"screen_inches":6.3,"battery_mah":null,"color":"черный"}},
+  {"id":"30071808","category":"914","attributes":{"brand":"Apple","model":"iPhone 15 Pro","storage_gb":128,"screen_inches":6.1,"battery_mah":null,"color":"синий"}},
+  {"id":"4257310","category":"914","attributes":{"brand":"Apple","model":"iPhone 17","storage_gb":256,"screen_inches":6.3,"battery_mah":null,"color":"черный"}},
+  {"id":"401249650","category":"987","attributes":{"brand":null,"model":null,"processor":null,"ram_gb":16,"storage_gb":512,"screen_inches":null,"color":"серый"}},
+  {"id":"4254500","category":"987","attributes":{"brand":"Apple","model":"MacBook Air 13 M4","processor":"Apple M4","ram_gb":16,"storage_gb":512,"screen_inches":13.6,"color":"голубой"}},
+  {"id":"401261940","category":"987","attributes":{"brand":"ASUS","model":"Vivobook 15 M1502NAQ-BQ272","processor":"AMD Ryzen 5 150","ram_gb":16,"storage_gb":512,"screen_inches":15.6,"color":"серебристый"}},
+  {"id":"400685550","category":"987","attributes":{"brand":"OSiO","model":"BaseLine B150i-004b","processor":"Intel N100","ram_gb":8,"storage_gb":256,"screen_inches":15.6,"color":"черный"}}
+]

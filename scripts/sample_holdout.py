@@ -44,7 +44,9 @@ def main():
             offers[category].append((score, str(sku_id), offer))
     for category in offers:
         offers[category].sort()
-        offers[category] = offers[category][:args.per_category * 5]
+        # Many indexed offers have no matching text row. Keep a wider candidate
+        # pool so a sparse category does not fail after just a few matches.
+        offers[category] = offers[category][:args.per_category * 200]
 
     candidates = {sku_id: (category, offer) for category, items in offers.items()
                   for _, sku_id, offer in items}

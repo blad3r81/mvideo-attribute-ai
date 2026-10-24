@@ -36,6 +36,9 @@ function validCanonical(key,value,raw,cat){
 }
 function normalizeValue(key,raw){
   const value=normalizeSpace(raw);
+  if(key==='model')return value
+    .replace(/\s+(?:(?:\d{1,3}\s*[+/]\s*)?\d{2,4}\s*(?:GB|ГБ|TB|ТБ))(?=\s|$).*$/iu,'')
+    .replace(/\s+\([^)]*\).*$/u,'').trim();
   if(key==='color'||key==='Цвет производителя') return getLexicon().color_aliases[value.toLocaleLowerCase()]??value.toLocaleLowerCase();
   if(key==='material')return value.toLocaleLowerCase();
   if(key==='size'||/^Размер (одежды|обуви|головного убора|перчаток)/iu.test(key)){
@@ -50,8 +53,10 @@ function normalizeValue(key,raw){
     const match=value.match(/(\d+(?:[.,]\d+)?)\s*(ТБ|TB|ГБ|GB)/i);
     if(match) return normNumber(match[1])*(/ТБ|TB/i.test(match[2])?1024:1);
   }
-  if(key==='processor'&&/^(?:Intel\s+Core|Core\s+i[3579]|AMD\s+Ryzen)/iu.test(value))
-    return value.replace(/\s+\d+(?:[.,]\d+)?\s*(?:ГГц|GHz)\s*$/iu,'');
+  if(key==='processor')return value
+    .replace(/\s+\d+(?:[.,]\d+)?\s*(?:ГГц|GHz)\s*$/iu,'')
+    .replace(/\b(Ryzen\s+[3579])\s+\1\b/iu,'$1')
+    .replace(/\bN-series\s+(N\d+)\b/iu,'$1');
   if(key==='screen_inches'){
     if(isRange(value))return null;
     const inch=value.match(/^(\d{1,3}(?:[.,]\d{1,2})?)\s*(?:["″]|дюйм(?:а|ов)?|inch(?:es)?|in)?(?:\s*\(\s*\d{1,3}(?:[.,]\d{1,2})?\s*см\s*\))?$/iu);
@@ -91,8 +96,18 @@ function add(candidates,key,value,raw,source,method,confidence){
   if(value===null||value===undefined||value==='')return;
   (candidates[key]??=[]).push({attribute:key,value,raw,source,method,confidence,evidence:{field:source,text:raw}});
 }
-function choose(key,items,cat){
+function choose(key,items,cat,title=''){
   if(!items?.length) return {attribute:key,status:'missing',reason:'not_found_in_text'};
+  if(key==='model'){
+    const supported=items.filter(x=>x.source==='seller_attributes.Модель'
+      && x.value.length<=80 && !/\b(?:Intel|AMD|Ryzen|Core)\b/iu.test(x.value)
+      && title.toLocaleLowerCase().includes(x.value.toLocaleLowerCase())
+      && items.filter(y=>y.source.endsWith('_search')).every(y=>
+        x.value.toLocaleLowerCase().includes(String(y.value).toLocaleLowerCase())
+        || String(y.value).toLocaleLowerCase().includes(x.value.toLocaleLowerCase())));
+    if(supported.length===1&&supported[0].confidence>=getDecisionPolicy().acceptance_threshold)
+      return {...supported[0],status:'accepted',reason:'title_and_seller_model_agree'};
+  }
   const comparable=value=>typeof value==='string'?value.toLocaleLowerCase():JSON.stringify(value);
   const values=[...new Set(items.map(x=>comparable(x.value)))];
   if(values.length>1){
@@ -102,7 +117,7 @@ function choose(key,items,cat){
       const canonical=search[0];
       const compatible=items.every(x=>x===canonical||
         x.source.endsWith('_search')||
-        normalizeSpace(x.raw).toLocaleLowerCase().includes(normalizeSpace(canonical.raw).toLocaleLowerCase()));
+        (key!=='model'&&normalizeSpace(x.raw).toLocaleLowerCase().includes(normalizeSpace(canonical.raw).toLocaleLowerCase())));
       if(compatible&&canonical.confidence>=getDecisionPolicy().acceptance_threshold&&validCanonical(key,canonical.value,canonical.raw,cat))return {...canonical,status:'accepted',reason:'catalog_search_value_confirmed'};
     }
     return {attribute:key,status:'review',reason:'conflicting_values',candidates:items};
@@ -172,7 +187,7 @@ export function extract(card,{catalog=getCatalog(),ruleExtractor=extractRules}={
     add(items,key,item.value,item.raw,item.source,item.method,item.confidence);
   }
   const keys=[...new Set([...required,...Object.keys(items)])];
-  const attributes=Object.fromEntries(keys.map(key=>[key,choose(key,items[key],cat)]));
+  const attributes=Object.fromEntries(keys.map(key=>[key,choose(key,items[key],cat,ruleInput.title)]));
   if(kind==='smartphone'){
     const width=attributes['Ширина'],thickness=attributes['Толщина'];
     const numberMm=item=>item&&item.reason!=='conflicting_values'&&/мм/iu.test(String(item.raw))?Number(String(item.raw).match(/\d+(?:[.,]\d+)?/)?.[0]?.replace(',','.')):NaN;

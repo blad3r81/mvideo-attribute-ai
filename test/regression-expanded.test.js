@@ -55,3 +55,44 @@ test('разный регистр бренда не создаёт ложный 
   assert.equal(result.attributes.brand.status,'accepted');
   assert.equal(result.attributes.brand.value,'HUAWEI');
 });
+
+test('слово «сердце» в описании не превращается в серый цвет',()=>{
+  const result=extract(card('Смартфон Google Pixel 10 Pro',{'Цвет':'черный','Цвет_search':'черный'},'Сердце устройства — процессор'));
+  assert.equal(result.attributes.color.status,'accepted');
+  assert.equal(result.attributes.color.value,'чёрный');
+});
+
+test('укороченная Модель_search не стирает суффикс Pro',()=>{
+  const result=extract(card('Смартфон Google Pixel 10 Pro',{'Бренд':'Google','Модель':'Pixel 10 Pro','Модель_search':'Pixel 10'}));
+  assert.equal(result.attributes.model.status,'accepted');
+  assert.equal(result.attributes.model.value,'Pixel 10 Pro');
+});
+
+test('коммерческое название с памятью не подменяет модель телефона',()=>{
+  const result=extract(card('Смартфон Apple iPhone 16 Pro 512GB черный',{'Бренд':'Apple','Модель':'iPhone 16 Pro 512GB черный'}));
+  assert.equal(result.attributes.model.status,'accepted');
+  assert.equal(result.attributes.model.value,'iPhone 16 Pro');
+  assert.equal(result.attributes.model.evidence.text,'iPhone 16 Pro 512GB черный');
+});
+
+test('длинная строка с процессором не становится названием модели ноутбука',()=>{
+  const title='Ноутбук Lenovo V15 G4 ABP AMD Ryzen 7 7730U, 16 ГБ, 512 ГБ';
+  const result=extract(card(title,{'Бренд':'Lenovo','Модель':'V15 G4 ABP AMD Ryzen 7 7730U, 16 ГБ, 512 ГБ'}));
+  assert.notEqual(result.attributes.model.status,'accepted');
+});
+
+test('частота не входит в каноническое имя процессора',()=>{
+  const result=extract(card('Ноутбук Apple MacBook Air M4',{'Процессор_search':'Apple M4 4.41 ГГц'}));
+  assert.equal(result.attributes.processor.value,'Apple M4');
+  assert.equal(result.attributes.processor.status,'accepted');
+});
+
+test('повтор семейства Ryzen удаляется из модели процессора',()=>{
+  const result=extract(card('Ноутбук ASUS',{'Процессор_search':'AMD Ryzen 5 Ryzen 5 150 3.3 ГГц'}));
+  assert.equal(result.attributes.processor.value,'AMD Ryzen 5 150');
+});
+
+test('память в ГБ отсекается от названия модели',()=>{
+  const result=extract(card('Ноутбук Apple MacBook Air 13 М4 16/512ГБ',{'Бренд':'Apple','Модель':'MacBook Air 13 М4 16/512ГБ'}));
+  assert.equal(result.attributes.model.value,'MacBook Air 13 М4');
+});

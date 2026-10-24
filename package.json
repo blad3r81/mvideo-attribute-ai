@@ -10,6 +10,7 @@
     "smoke": "node scripts/smoke.js",
     "check:setup": "node scripts/check_setup.js",
     "verify:reference": "node scripts/verify_reference.js && node scripts/predict.js data/holdout_cards.json data/holdout_predictions.json --rules-only && node scripts/evaluate.js data/holdout_assistant_reference.json data/holdout_predictions.json",
+    "verify:reference:second": "node scripts/verify_reference.js data/holdout_second_cards.json data/holdout_second_reference.json data/holdout_cards.json && node scripts/predict.js data/holdout_second_cards.json data/holdout_second_predictions.json --rules-only && node scripts/evaluate.js data/holdout_second_reference.json data/holdout_second_predictions.json",
     "test": "node --test"
   },
   "engines": { "node": ">=20" }

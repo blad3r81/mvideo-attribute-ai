@@ -11,3 +11,6 @@ data/predictions_full.jsonl.gz
 data/*.jsonl.gz
 
 data/holdout_predictions.json
+data/holdout_second_predictions.json
+node_modules/
+pnpm-lock.yaml
